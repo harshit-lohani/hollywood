@@ -2,15 +2,13 @@ from typing import List, Any, Union
 import random
 print("\n\n Welcome to the HollWood game, you must enter a movie or choose to get a random movie \n and then guess it in 8 chances \n\n")
 
-movies = [
-    "cast/away","inception","memento","lost/in/translation","her","django/unchained","spirited/away","enter/the/void",
-    "burning"
+movies = open("movies.txt").readlines()
 
-]
 choice = input("\ndo you want a random movie? press y for yes, n for no: ")
 if choice.upper() == "N":
     movie = input("\n\nenter the movie in / separated fashion: \n")
 if choice.upper() == "Y":
+  
     movie = random.choice(movies)
 
 movie_string = movie.upper()
